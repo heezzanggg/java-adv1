@@ -11,10 +11,12 @@ public class BoundedMain {
         //1.BoundedQueue 선택
         //버퍼 크기 = 2, 생산자가 2개를 넘어서 데이터를 추가로 저장하려고하면 문제 생김
         //버퍼에 데이터가 없는데도, 소비자가 데이터를 가져갈 때도 문제 생김
-        BoundedQueue queue = new BoundedQueueV1(2); 
+//        BoundedQueue queue = new BoundedQueueV1(2);
+//        BoundedQueue queue = new BoundedQueueV2(2);
+        BoundedQueue queue = new BoundedQueueV3(2);
 
         //2. 생산자, 소비자 실행 순서 선택, 반드시 하나만 선택!
-        //producerFirst(queue); //생산자 먼저 실행
+//        producerFirst(queue); //생산자 먼저 실행
         consumerFirst(queue); //소비자 먼저 실행
     }
 
